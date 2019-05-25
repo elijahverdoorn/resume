@@ -1,0 +1,172 @@
+% resume.tex
+% vim:set ft=tex spell:
+
+\documentclass[10pt,letterpaper]{article}
+\usepackage[letterpaper,margin=0.75in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{mdwlist}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{tgpagella}
+\pagestyle{empty}
+\setlength{\tabcolsep}{0em}
+
+% indentsection style, used for sections that aren't already in lists
+% that need indentation to the level of all text in the document
+\newenvironment{indentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% opposite of above; bump a section back toward the left margin
+\newenvironment{unindentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{-0.5#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% format two pieces of text, one left aligned and one right aligned
+\newcommand{\headerrow}[2]
+{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+	#1 &
+	#2 \\
+\end{tabular*}}
+
+% make "C++" look pretty when used in text by touching up the plus signs
+\newcommand{\CPP}
+{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
+
+% and the actual content starts here
+\begin{document}
+
+\begin{center}
+{\LARGE \textbf{Elijah R. Verdoorn}}
+
+2340 8th Ave.\ \ \textbullet
+\ \ Apt\ 105\ \ \textbullet
+\ \ Oakland, CA, 94606
+\\
+(715) 781-7729\ \ \textbullet
+\ \ elijah@elijahverdoorn.com
+\end{center}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Experience}
+
+\begin{itemize}
+	\parskip=0.1em
+
+	\item
+	\headerrow
+		{\textbf{Pandora}}
+		{\textbf{Oakland, CA}}
+	\\
+	\headerrow
+		{\emph{Software Engineer}}
+		{\emph{2018 -- Present}}
+	\begin{itemize*}
+		\item Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+		diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+		erat volutpat.
+	\end{itemize*}
+
+	\item
+	\headerrow
+		{\textbf{Pandora}}
+		{\textbf{Oakland, CA}}
+	\\
+	\headerrow
+		{\emph{Software Engineering Intern}}
+		{\emph{July 2017 -- August 2017}}
+	\begin{itemize*}
+		\item Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+		diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+		erat volutpat.
+	\end{itemize*}
+
+	\item
+	\headerrow
+		{\textbf{St. Olaf College Student Government Association}}
+		{\textbf{Northfield, MN}}
+	\\
+	\headerrow
+		{\emph{Chief Technology Officer}}
+		{\emph{April 2016 -- June 2017}}
+	\begin{itemize*}
+		\item Ut wisi enim ad minim veniam, quis nostrud exerci tation
+		ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+	\end{itemize*}
+
+	\item
+	\headerrow
+		{\textbf{St. Olaf College}}
+		{\textbf{Northfield, MN}}
+	\\
+	\headerrow
+		{\emph{Digital Scholarship Intern}}
+		{\emph{August 2014 -- December 2017}}
+	\begin{itemize*}
+		\item Ut wisi enim ad minim veniam, quis nostrud exerci tation
+		ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+	\end{itemize*}
+
+	\item
+	\headerrow
+		{\textbf{Proto Labs}}
+		{\textbf{Maple Plain, MN}}
+	\\
+	\headerrow
+		{\emph{Software Development Intern}}
+		{\emph{May 2016 -- August 2016}}
+	\begin{itemize*}
+		\item Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+		diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+		erat volutpat.
+	\end{itemize*}
+
+\end{itemize}
+
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Education}
+
+\begin{itemize}
+	\parskip=0.1em
+
+	\item
+	\headerrow
+		{\textbf{St. Olaf College}}
+		{\textbf{Northfield, MN}}
+	\\
+	\headerrow
+		{\emph{B.A. Computer Science, Mathematics}}
+		{\emph{2014 -- 2017}}
+	\begin{itemize*}
+		\item Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+	\end{itemize*}
+
+\end{itemize}
+
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Technical Skills}
+
+\begin{indentsection}{\parindent}
+\hyphenpenalty=1000
+\begin{description*}
+	\item[Languages:]
+	Java, Kotlin, \CPP, JavaScript, \LaTeX, SQL
+	\item[Tools:]
+	Vim, Android Studio, Git, Linux
+	\item[Technologies:]
+	Espresso, jUnit, Dialogflow
+\end{description*}
+\end{indentsection}
+
+\end{document}
