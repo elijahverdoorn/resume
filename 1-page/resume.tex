@@ -1,0 +1,186 @@
+% resume.tex
+% vim:set ft=tex spell:
+
+\documentclass[9pt,letterpaper]{article}
+\usepackage[letterpaper,margin=0.5in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{mdwlist}
+\usepackage{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{tgpagella}
+\pagestyle{empty}
+\setlength{\tabcolsep}{0em}
+
+% indentsection style, used for sections that aren't already in lists
+% that need indentation to the level of all text in the document
+\newenvironment{indentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% opposite of above; bump a section back toward the left margin
+\newenvironment{unindentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{-0.5#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% format two pieces of text, one left aligned and one right aligned
+\newcommand{\headerrow}[2]
+{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+	#1 &
+	#2 \\
+\end{tabular*}}
+
+% make "C++" look pretty when used in text by touching up the plus signs
+\newcommand{\CPP}
+{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
+
+% and the actual content starts here
+\begin{document}
+
+\begin{center}
+{\LARGE \textbf{Elijah R. Verdoorn}}
+
+2340 8th Ave. Apt 105; Oakland, CA, 94606 \ \textbullet
+\ \ (715) 781-7729\ \ \textbullet
+\ \ elijah@elijahverdoorn.com
+
+\\
+\ \ elijahverdoorn.com \ \textbullet
+\ \ github.com/elijahverdoorn \ \textbullet
+\ \ linkedin.com/in/elijahverdoorn
+\end{center}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Experience}
+
+\begin{itemize}
+	\parskip=0.1em
+
+	\item
+	\headerrow
+		{\textbf{WeWork}}
+		{\textbf{San Francisco, CA}}
+	\\
+	\headerrow
+		{\emph{Software Engineer}}
+		{\emph{September 2019 -- May 2020}}
+	\begin{itemize*}
+		\item Lead development of spatial rendering SDK for Android client consumption enabling visualization of interior building floor plans, world map locations, and arbitrary data overlays on mobile devices through both MapBox and Google Maps SDKs
+		\item Architect and implement tools and workflows to support SDK-based development; leverage resulting SDKs in rapid development of prototype products
+		\item Design, develop, and deploy new Android application to enable novel experiences within existing co-working spaces, expanding potential market leading to increased revenue and customer satisfaction
+	\end{itemize*}
+
+	\item
+	\headerrow
+		{\textbf{Pandora}}
+		{\textbf{Oakland, CA}}
+	\\
+	\headerrow
+		{\emph{Software Engineer}}
+		{\emph{Feburary 2018 -- September 2019}}
+	\begin{itemize*}
+		\item Modernize legacy Android codebase to use up-to-date technologies including RxJava, Kotlin, Coroutines, and Android Jetpack
+		\item Design and implement reactive, repository-based system for caching and displaying mobile ads to improve revenue and code re-usability
+		\item Implement and manage sustainable on-boarding process, reducing ramp-up time and increasing satisfaction among new hires
+		\item Mentor intern and apprentice, guiding through project and professional development
+	\end{itemize*}
+
+	\headerrow
+		{\emph{Software Engineering Intern}}
+		{\emph{July 2017 -- August 2017}}
+
+	\item
+	\headerrow
+		{\textbf{St. Olaf College Student Government Association}}
+		{\textbf{Northfield, MN}}
+	\\
+	\headerrow
+		{\emph{Chief Technology Officer}}
+		{\emph{April 2016 -- June 2017}}
+	\begin{itemize*}
+		\item Hire, train, and lead a team of software developers to build and maintain the digital student hub, oleville.com
+		\item Architect, build, deploy, and support mobile apps on iOS and Android to increase engagement with student government and ease dissemination of information
+		\item Sit on the Executive Committee and Student Senate, participate in planning and executing campus events; implementing policy around improvements to campus culture
+	\end{itemize*}
+
+	\item
+	\headerrow
+		{\textbf{St. Olaf College}}
+		{\textbf{Northfield, MN}}
+	\\
+	\headerrow
+		{\emph{Digital Scholarship Intern}}
+		{\emph{August 2014 -- December 2017}}
+
+	\item
+	\headerrow
+		{\textbf{Proto Labs}}
+		{\textbf{Maple Plain, MN}}
+	\\
+	\headerrow
+		{\emph{Software Development Intern}}
+		{\emph{May 2016 -- August 2016}}
+
+\end{itemize}
+
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Education}
+
+\begin{itemize}
+	\parskip=0.1em
+
+	\item
+	\headerrow
+		{\textbf{St. Olaf College}}
+		{\textbf{Northfield, MN}}
+	\\
+	\headerrow
+		{\emph{B.A. Computer Science, Mathematics}}
+		{\emph{August 2014 -- December 2017}}
+
+\end{itemize}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Projects}
+
+\begin{itemize}
+	\parskip=0.1em
+
+	\item {\textbf{Chrono Daily Deal}} \hfill
+	{\emph{Actions on Google, DialogFlow, Firebase, Kotlin, JavaScript}}
+	\item {\textbf{Recipebook for Kotlin and RxJava}} \hfill
+	{\emph{Kotlin, KotlinX Coroutines, RxJava}}
+	\item {\textbf{Duplicate Tab Hotkey}} \hfill
+	{\emph{JavaScript, Google Chrome Extensions}}
+\end{itemize}
+
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Technical Skills}
+
+\begin{indentsection}{\parindent}
+\hyphenpenalty=1000
+\begin{description*}
+	\item[Platforms:]
+	Android, Web Front-End, API Development, Actions on Google (Google Assistant), Firebase, Google Cloud Platform, Google Chrome Extensions
+	\item[Languages:]
+	Kotlin, Java, JavaScript, \CPP, \LaTeX, SQL, BASH
+	\item[Tools:]
+	IntelliJ, Android Studio, Vim, Git, Linux, Bugsnag, Jira
+	\item[Technologies:]
+	KotlinX Coroutines, RxJava, Android LiveData, Room, Android MVVM, GraphQL, Retrofit, MapBox, Google Maps SDK, Espresso, jUnit, Dialogflow, Firebase Functions, Google Analytics
+\end{description*}
+\end{indentsection}
+
+\end{document}
