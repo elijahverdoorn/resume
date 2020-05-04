@@ -1,0 +1,87 @@
+% resume.tex
+% vim:set ft=tex spell:
+
+\usepackage[letterpaper,margin=0.5in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{mdwlist}
+\usepackage{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{tgpagella}
+\pagestyle{empty}
+
+% indentsection style, used for sections that aren't already in lists
+% that need indentation to the level of all text in the document
+\newenvironment{indentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% opposite of above; bump a section back toward the left margin
+\newenvironment{unindentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{-0.5#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% format two pieces of text, one left aligned and one right aligned
+\newcommand{\headerrow}[2]
+{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+	#1 &
+	#2 \\
+\end{tabular*}}
+
+% make "C++" look pretty when used in text by touching up the plus signs
+\newcommand{\CPP}
+{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
+
+% variables to be defined in files using this template
+% \newcommand{\company}{}
+% \newcommand{\role}{}
+% \newcommand{\referral}{}
+% \newcommand{\interest}{}
+% \newcommand{\especially}{}
+% \newcommand{\companyHeader}{}
+
+% and the actual content starts here
+\begin{document}
+
+\begin{center}
+{\LARGE \textbf{Elijah R. Verdoorn}}
+
+2340 8th Ave. Apt 105; Oakland, CA, 94606 \ \textbullet
+\ \ (715) 781-7729\ \ \textbullet
+\ \ elijah@elijahverdoorn.com
+
+\\
+\ \ elijahverdoorn.com \ \textbullet
+\ \ github.com/elijahverdoorn \ \textbullet
+\ \ linkedin.com/in/elijahverdoorn
+\end{center}
+
+\hrule
+\vspace{1em}
+
+\noindent\today
+\\
+
+\noindent\companyHeader
+\\
+
+\noindent To whom it may concern, \\
+
+\noindent I am pleased to apply today for the position of \role at \company, which I became aware of via \referral. After having seen the opening I was inspired to apply thanks to my interest in \interest, especially due to the company's \especially.\\
+
+\noindent Most recently while employed at WeWork as a Software Engineer I worked across two major projects and learned a great deal from successfully completing each. The first of these projects saw me leading the development of an SDK for the Android platform to enable developers both within the company and external partners to easily visualize the floor plans of WeWork co-working spaces. As the platform leader of this project I was tasked with architecting the Android code, implementing, testing, and supporting throughout the entire project life cycle. The second major project I completed at WeWork allowed me to collaborate from San Francisco with developers in New York City to create a new Android application that expanded the potential WeWork customer base, creating new opportunities for revenue within existing spaces.  I am proud of having been a major part of delivering this project on-time despite the publicly-acknowledged challenges the company faced in the latter half of 2019 and the first quarter of 2020, all without sacrificing engineering quality: the project has a unit test coverage rate exceeding 75\%, a framework in place for continuous delivery, and an architecture that takes advantage of cutting-edge tools within the Android ecosystem including Kotlin, Coroutines, and GraphQL. Further\\
+
+\noindent Prior to my time at WeWork I began my career working at Pandora, where I applied my skills to general feature development and platform improvements of their Android application. The experience of launching features to millions of monthly active users taught me many important lessons around scalability,  the importance of monitoring and A/B testing, and how even minute changes to user experiences can have a dramatic impact on monetization.\\
+
+\noindent I look forward to conversing further about the positions available at \company and discovering how I might be able to contribute to your organization. Please don't hesitate to contact me with any questions.\\
+
+\noindent Sincerely,
+\\\noindent
+Elijah Verdoorn
+\end{document}
