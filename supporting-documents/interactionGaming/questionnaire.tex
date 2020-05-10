@@ -1,0 +1,105 @@
+% vim:set ft=tex spell:
+
+\documentclass[9pt,letterpaper]{article}
+\usepackage[letterpaper,margin=0.5in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{mdwlist}
+\usepackage{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{tgpagella}
+\pagestyle{empty}
+
+% indentsection style, used for sections that aren't already in lists
+% that need indentation to the level of all text in the document
+\newenvironment{indentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% opposite of above; bump a section back toward the left margin
+\newenvironment{unindentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{-0.5#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% format two pieces of text, one left aligned and one right aligned
+\newcommand{\headerrow}[2]
+{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+	#1 &
+	#2 \\
+\end{tabular*}}
+
+% make "C++" look pretty when used in text by touching up the plus signs
+\newcommand{\CPP}
+{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
+
+% and the actual content starts here
+\begin{document}
+
+\begin{center}
+{\LARGE \textbf{Elijah R. Verdoorn}}
+
+2340 8th Ave. Apt 105; Oakland, CA, 94606 \ \textbullet
+\ \ (715) 781-7729\ \ \textbullet
+\ \ elijah@elijahverdoorn.com
+
+\ \ elijahverdoorn.com \ \textbullet
+\ \ github.com/elijahverdoorn \ \textbullet
+\ \ linkedin.com/in/elijahverdoorn
+\end{center}
+
+\hrule
+\vspace{1em}
+
+\begin{enumerate}
+	\item Why are you interested in working at Interaction Gaming?
+
+		Taking on a role at Interaction Gaming is enticing for me primarily because it would allow me to continue to grow professionally in areas that I am already competent while also exposing me to new areas of development that I have not yet encountered. I seek to always hold a student mindset, constantly growing and adding new skills to my toolbox, a role at Interaction Gaming would provide me a platform on which to continue this growth. I also am attracted to working at Interaction Gaming because it is a smaller company: thus far in my career I've worked for large organizations, I would like to experience working for a smaller company in which I can make a large impact.
+
+	\item What is your rationale for working in Ann Arbor?
+
+		I grew up in Hudson, WI and feel a strong connection to the Midwest. I have enjoyed working and experiencing life in the San Francisco Bay Area for the past few years, but feel that the time has come to make a move back to be closer to my family. In addition to the desire to be closer to my family I believe that Ann Arbor's pace of life would suit me well; it is large enough to have everything I'd need, but not as overwhelming as life in California can be.
+
+	\item Are you authorized to work in the US? Are there any limits to that authorization that we should be aware of?
+
+		I am authorized to work in the USA with no limits to that authorization.
+
+	\item We embrace six core values at Interaction Gaming. Pick the one that you connect best with and tell us why.
+
+		While all of the core values are easy for me to connect with, I resonate most strongly with "Dream Big". I believe that it is tempting to artificially limit one's potential by simply picking goals that are too limited, these limitations being a product of fearing failure. The challenge of pushing past said fear can produce a great deal of growth in itself, and the benefits don't stop there. If you dream big enough and work to chase those dreams, failure to achieve those dreams usually results in being at a place that you can be proud of regardless of having "failed". I have achieved the greatest satisfaction and happiness in my life from choosing large goals, and working to achieve them - the bigger the goal, the more rewarding it is when accomplished.
+
+	\item Describe a project where you worked with mobile development. What languages and frameworks did you utilize? What was the outcome of the project?
+
+		Most recently, while employed at WeWork I developed an Android application to enable drop-in use of WeWork's coworking spaces to the general public. My team and I chose to write the application in Kotlin and made heavy use of the MVI architecture, enabled by libraries including CoRedux, Envoy, Retrofit, Apollo, and Dagger. The project was successfully completed and delivered on-time, with unit test coverage exceeding 75\% and is undergoing an iterative release process.
+
+	\item What programming language best suits your style and why? What is your level of mastery with this language?
+
+		Thanks to my professional focus on Android development I have spent the past few years becoming an expert in Kotlin. The language suits my style perfectly since it allows me to express my ideas in a variety of forms: some of the problems that I solve lend themselves to functional solutions, others are better modeled in a more object-oriented manner. Kotlin is flexible enough that it can support each of these paradigms. In addition to being flexible in the programming style that the language allows, Kotlin supports my interest in deploying solutions to a variety of platforms: I appreciate being able to write my core code once and run it across mobile, the server, and the web. Since I've used Kotlin so much recently I've become very familiar with the language; I understand it well and find that I'm able to express my ideas fluently in it. I have also begun to contribute to the language itself, further increasing my confidence in my skills.
+
+	\item Describe a project where you came into an existing code base. In general, what was your approach to get your arms around it? Looking back, would you do anything differently?
+
+		I distinctly remember my first day as a Software Engineering Intern at Pandora. Coming into the experience fresh off completing my Junior year of college, I had not been exposed to a codebase as large and complex as the one that I was faced with. I knew that onboarding to the codebase as quickly as possible would be critical, since my time as an intern would be limited to just twelve weeks. To succeed in this realm I relied heavily on my teammates: I identified individuals who were experts in the application's subsystems and scheduled meetings with them one-on-one to allow me to ask targeted questions about the code's architecture, common pitfalls experienced by others who had recently come into the project, and the best-practices that would be important to keep in mind as I worked in the subsystem in question. I consider this approach to have been successful overall, but if I could re-do the experience I would have taken more detailed notes on each conversation that I had, perhaps even recording the conversations so I would be able to revisit advice given without needing to continuously interrupt my coworkers.
+
+	\item What past experiences or personal qualities enable you to work well with other developers and designers?
+
+		I have had extensive experience in my past jobs working with other developers and designers. I believe that effective co-working relationships are founded on proper communication: written, verbal, and code-centric communication have all been critical to my success to this point. In order to ensure that I foster healthy and productive working relationships I strive to leverage frequent, detailed, directed communication with all stakeholders in a project such that everyone remains aligned and moving in concert towards the same set of goals.
+
+	\item Describe an area of weakness that you'd like to strengthen in the next 6 to 12 months. Generally speaking, what actions would you take to make this improvement?
+
+		I am currently focusing on working to improve my technical writing skills. I place a great deal of importance on documentation, creating and maintaining technical directions, and using long-form writing as a means of working through problems. In working to improve these skills I have been practicing by writing for my blog (elijahverdoorn.com), have taken leadership roles in creating on-boarding documentation for teams I have worked on, and have been seizing opportunities wherever I can to write as a means of preparing for professional events like speaking engagements, conference summaries, and meeting results. My goal in improving these skills is to grow the audience for my writing to more deeply embed myself in the mobile development community as both a content creator and consumer.
+
+	\item What interests do you have outside of work? Why do they interest you?
+
+		When I'm not working, my primary hobby is singing. I've been a musician for as long as I can remember, the experience of creating art with others brings me satisfaction, fulfillment, and provides a level of connection that I have not found from participating in any other activity. I currently engage with this lifelong hobby by leading the Bass section of the Berkeley Community Chorus, a group of 40 musicians who encourage me to better myself every time we meet. Making music centers me, provides me a creative outlet, and helps me to set aside my problems and focus on all the positive things going on in my life.
+
+	\item What do you need to learn about our company in order to better evaluate working here?
+
+		No matter where I work I believe that the people I work with can make or break the experience. I have had the privilege of working with fantastic people in every role I've held, they made the challenging times bearable and the good times better. In light of the importance I place on the people I work with, I am excited to get to know the team at Interaction Gaming and discover how well we can work together. In addition to meeting the team at Interaction I would be excited to learn more about how the company approaches product development: how timelines and expectations are established, how people are held accountable for delivering on their responsibilities, and how quality is maintained over time so that the team can be confident that products delivered to the customer meet (or exceed) expectations.
+\end{enumerate}
+
+\end{document}
